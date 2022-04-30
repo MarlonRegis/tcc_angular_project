@@ -1,0 +1,63 @@
+body {
+    font-family: 'Poppins', Helvetica, sans-serif;
+}
+
+p {
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.nao-aparece {
+    visibility: hidden;
+    height: 0px;
+    position: absolute;
+}
+
+.btn {
+    border: 3px solid #fff;
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: bold;
+}
+
+.btn.btn-preto:hover {
+    color: #af8d8d;
+    border-color: #af8d8d;
+}
+
+.btn:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+
+/*------------------JS-------------*/
+
+.js [data-slide-nav] button.active {
+    background: #fec63e;
+}
+
+.js [data-anime] {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+}
+
+.js .fadeInDown {
+    transform: translate3d(0, -2px, 0);
+}
+
+.js .anime {
+    opacity: 1;
+    transform: none;
+    transition: opacity 800ms, transform 800ms;
+}

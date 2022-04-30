@@ -1,0 +1,71 @@
+/*------------HEADER------------*/
+
+body {
+    font-family: 'Poppins', Helvetica, sans-serif;
+}
+
+p {
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.logomarca {
+    width: 220px;
+    height: 100px;
+    margin: -20px 0px;
+    background: url("../../assets/imagens/logo.png") no-repeat center center/cover;
+    display: block;
+}
+
+.logo {
+    float: left;
+}
+
+.menu {
+    padding: 10px 0;
+    text-align: right;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.menu li a:hover {
+    padding-bottom: 3px;
+    border-bottom: 2px solid #fff;
+}
+
+.background {
+    position: relative;
+    left: 0%;
+    width: 100%;
+    height: max-content;
+    padding-top: 40px;
+}
+
+.menu li a img {
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.menu li a img:hover {
+    border: none;
+}

@@ -1,0 +1,103 @@
+.background {
+    background: url("../imagens/background-rose.jpg") no-repeat center;
+}
+
+label {
+    color: #fff;
+}
+
+section {
+    height: 517px;
+}
+
+
+/*Orçamentos*/
+
+.contato {
+    padding: 40px 0;
+}
+
+#form-contato {
+    padding-right: 60px;
+}
+
+#form-contato label {
+    display: block;
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+#form-contato input {
+    display: block;
+    width: 100%;
+    border: 2px solid #fff;
+    background: none;
+    padding: 7px 10px;
+    outline: none;
+    font-size: 14px;
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+    margin-top: 4px;
+}
+
+#form-contato textarea {
+    display: block;
+    resize: none;
+    width: 100%;
+    border: 2px solid #fff;
+    background: none;
+    padding: 7px 10px;
+    height: 120px;
+    outline: none;
+    font-size: 14px;
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+    margin-top: 4px;
+}
+
+#form-contato button {
+    padding: 7px 40px;
+    background: none;
+}
+
+.contato-dados h3 {
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+.contato-dados span {
+    display: block;
+    font-size: 16px;
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    line-height: 30px;
+    color: #fff;
+}
+
+.contato-dados span:nth-of-type(even) {
+    margin-bottom: 30px;
+}
+
+.contato-dados ul {
+    margin-top: 10px;
+}
+
+.contato-dados ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.contato-dados ul li a {
+    display: block;
+    padding: 10px;
+}
+
+.contato-dados ul li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.contato-mapa {
+    margin-bottom: 60px;
+}
