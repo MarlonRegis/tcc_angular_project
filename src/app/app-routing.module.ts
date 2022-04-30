@@ -1,7 +1,4 @@
-import { ContatoComponent } from './contato/contato.component';
-import { SobreComponent } from './sobre/sobre.component';
-import { ProjetosComponent } from './projetos/projetos.component';
-import { HomeComponent } from './home/home.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 

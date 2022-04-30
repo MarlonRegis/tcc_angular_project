@@ -1,15 +1,5 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import {
-  trigger,
-  style,
-  animate,
-  transition,
-  state,
-  group,
-  query,
-  animateChild,
-  keyframes
-} from '@angular/animations';
 
 @Component({
   selector: 'app-projetos',
@@ -32,8 +22,20 @@ import {
 })
 export class ProjetosComponent implements OnInit {
 
+  public otherProjects: boolean = false;
+
+  showMore(): void{
+  console.log("Clicado no botao de ver mais");
+    this.otherProjects = true;
+  }
+
+  showLess(): void{
+    console.log("Clicado no botao de ver menos");
+    this.otherProjects = false;
+  }
 
   constructor() {
+
   }
     ngOnInit(): void {  }
 

@@ -1,15 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  trigger,
-  style,
-  animate,
-  transition,
-  state,
-  group,
-  query,
-  animateChild,
-  keyframes
-} from '@angular/animations';
 
 @Component({
   selector: 'app-layout',

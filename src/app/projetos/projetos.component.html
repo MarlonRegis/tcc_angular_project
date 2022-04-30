@@ -8,11 +8,11 @@
             </p>
         </div>
     </section>
-    <section class="container">
-        <div class="projeto-item" [@popOverState]>
+    <section>
+        <div class="projeto-item container" [@popOverState]>
             <div class="grid-11">
                 <img src="../../assets/imagens/projetos/modelo1.png" alt="Imagem projeto quarto">
-                <h2>Passeio</h2>
+                <h2>Quarto</h2>
             </div>
             <div class="grid-5 projeto-icone">
                 <img src="../../assets/imagens/projetos/modelo3.png" alt="Imagem projeto quarto 2">
@@ -21,17 +21,19 @@
                 <img src="../../assets/imagens/projetos/modelo2.png" alt="Imagem projeto quarto 3">
             </div>
             <div class="grid-8 projeto-info">
-                <p>Muito melhor do que passear pela orla a vidros fechados. A Bikcraft Passeio é uma bicicleta que une conforto e praticidade para o seu dia a dia. Você nunca mais vai querer saber de outra.</p>
+                <p>Muito melhor do que ter um quarto elegante, é ter um quarto que se adequa ao seu dia a dia, e em um espaço pequeno consegue guardar todas as suas coisas.</p>
                 <ul>
                     <li>Conforto</li>
-                    <li>Praticidade</li>
                     <li>Design</li>
-                    <li>Versatilidade</li>
+                    <li>Moderno</li>
+                    <li>Espaço</li>
                 </ul>
             </div>
         </div>
 
-        <div class="projeto-item" [@popOverState]>
+        <button (click)="showMore()" *ngIf="!otherProjects" class="button_show">Mostre mais</button>
+
+        <div *ngIf="otherProjects" class="projeto-item container" [@popOverState]>
             <div class="grid-11">
                 <img src="../../assets/imagens/projetos/modelo1.png" alt="Imagem projeto quarto">
                 <h2>Passeio</h2>
@@ -52,5 +54,6 @@
                 </ul>
             </div>
         </div>
+        <button (click)="showLess()" *ngIf="otherProjects" class="button_show">Mostre menos</button>
     </section>
 </body>

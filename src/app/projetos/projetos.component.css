@@ -88,7 +88,7 @@
     text-align: center;
     color: rgb(248, 170, 170);
     background-color: #fff;
-    padding-top: 15px;
+    padding-top: 25px;
 }
 
 .introducao-interna h1 {
@@ -105,4 +105,17 @@
     height: 3px;
     background: #fff;
     margin: 6px auto 10px auto;
+}
+
+.button_show {
+    width: 100%;
+    margin-top: 50px;
+    height: 120px;
+    text-align: center;
+    color: rgb(248, 170, 170);
+    background-color: #fff;
+    border: none;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
 }

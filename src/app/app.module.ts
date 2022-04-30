@@ -1,36 +1,25 @@
-import { ContatoService } from './contato.service';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { ProjetosComponent } from './projetos/projetos.component';
-import { ContatoComponent } from './contato/contato.component';
-import { SobreComponent } from './sobre/sobre.component';
-import { LayoutComponent } from './layout/layout.component';
+import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ContatoService } from './contato.service';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ProjetosComponent,
-    ContatoComponent,
-    SobreComponent,
     LayoutComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [ContatoService],
   bootstrap: [AppComponent]

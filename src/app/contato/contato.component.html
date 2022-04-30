@@ -2,7 +2,7 @@
     <div class="background"></div>
 
     <section class="contato container" data-anime="1200">
-        <form id="form-contato" #f="ngForm" (ngSubmit)="onSubmit(f)" class="grid-10">
+        <form id="form-contato" #f="ngForm" (ngSubmit)="onSubmit(f)" class="grid-10" [@popOverState]>
             <label for="nome">Nome</label>
             <input type="text" name="Fullname" id="nome" required [(ngModel)]="usuario.nome" #nome="ngModel">
 
@@ -23,7 +23,7 @@
             <div *ngIf="!f.valid && f.touched">Preencha todos os campos obrigatórios</div>
         </form>
 
-        <div class="contato-dados grid-6">
+        <div class="contato-dados grid-6" [@popOverState]>
             <h3>Outras formas de contato</h3>
             <span>81 99513-9730</span>
             <span>milenascast.arq@gmail.com</span>

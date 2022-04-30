@@ -29,12 +29,10 @@
                         "styles": [
                             "src/assets/css/normalize.css",
                             "src/assets/css/grid.css",
-                            "src/assets/css/style.css"
+                            "src/assets/css/style.css",
+                            "src/assets/css/responsivo.css"
                         ],
-                        "scripts": [
-                            "src/assets/js/simple-anime.js",
-                            "src/assets/js/scripts.js"
-                        ]
+                        "scripts": []
                     },
                     "configurations": {
                         "production": {
