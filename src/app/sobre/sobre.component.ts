@@ -15,8 +15,8 @@ import { Component, OnInit } from '@angular/core';
       })),
 
       transition('* => *', [
-        style({ transform: 'translateY(-5%)'}),
-        animate('1s 500ms ease-out', style({ transform: 'translateY(0)' }))])
+        style({ transform: 'translateY(-5%)', opacity: 0}),
+        animate('1s 500ms ease-out', style({ transform: 'translateY(0)', opacity: 1}))])
   ])
 ]
 })
