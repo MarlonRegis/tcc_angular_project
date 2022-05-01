@@ -29,8 +29,7 @@
                         "styles": [
                             "src/assets/css/normalize.css",
                             "src/assets/css/grid.css",
-                            "src/assets/css/style.css",
-                            "src/assets/css/responsivo.css"
+                            "src/assets/css/style.css"
                         ],
                         "scripts": []
                     },

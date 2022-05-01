@@ -4,14 +4,13 @@
     left: 0%;
     top: 0%;
     width: 100%;
-    height: 625px;
     animation: animate 15s ease-in-out infinite;
     background-size: cover;
     background-position: center;
 }
 
 section {
-    height: 800px;
+    height: 100vh;
 }
 
 @keyframes animate {
@@ -27,5 +26,11 @@ section {
     }
     75% {
         background-image: url("../../assets/imagens/home/4.png");
+    }
+}
+
+@media screen and (min-width: 788px) and (max-width: 979px) {
+    section {
+        height: 100vh;
     }
 }

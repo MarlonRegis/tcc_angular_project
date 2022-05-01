@@ -13,8 +13,30 @@ label {
     color: #fff;
 }
 
-section {
-    min-height: 520px;
+.introducao-interna {
+    width: 100%;
+    margin-top: 30px;
+    height: 120px;
+    text-align: center;
+    color: rgb(248, 170, 170);
+    background-color: #fff;
+    padding-top: 25px;
+}
+
+.introducao-interna h1 {
+    font-size: 36px;
+    color: rgb(248, 170, 170);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.introducao-interna h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #fff;
+    margin: 6px auto 10px auto;
 }
 
 
@@ -67,7 +89,7 @@ section {
     background: none;
 }
 
-div {
+form div {
     font-size: 12px;
     font-family: 'Poppins', 'Times New Roman', Times, serif;
     color: red;
@@ -121,4 +143,19 @@ button[disabled] {
 
 .contato-mapa {
     margin-bottom: 60px;
+}
+
+@media screen and (min-width: 788px) and (max-width: 979px) {
+    .contato {
+        height: 100vh;
+    }
+}
+
+@media only screen and (max-width: 787px) {
+    #form-contato {
+        padding-right: 0px;
+    }
+    .introducao-interna {
+        margin-top: 0;
+    }
 }

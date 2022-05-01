@@ -1,6 +1,15 @@
 <body>
     <div class="background"></div>
 
+    <section class="introducao-interna" [@popOverState]>
+        <div>
+            <h1> Contato</h1>
+            <p>
+                Tire suas dúvidas com a gente ou solicite um orçamento
+            </p>
+        </div>
+    </section>
+
     <section class="contato container" data-anime="1200">
         <form id="form-contato" #f="ngForm" (ngSubmit)="onSubmit(f)" class="grid-10" [@popOverState]>
             <label for="nome">Nome</label>
