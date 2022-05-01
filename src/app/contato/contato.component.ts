@@ -1,4 +1,6 @@
-import { ContatoService } from './../contato.service';
+import { Router, Routes } from '@angular/router';
+import { ContatoService } from './contato.service';
+
 import { FormGroup } from '@angular/forms';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
@@ -25,23 +27,20 @@ import { Component, OnInit, NgModule } from '@angular/core';
 })
 export class ContatoComponent implements OnInit {
 
-  private api = "https://formsubmit.co/milenacast.arqsite@gmail.com"
-
   usuario: any = {
     nome: '',
     email: '',
     telefone: '',
     mensagem: ''
   }
+  Routes: any;
 
   onSubmit(formulario: any ): void{
-    console.log(formulario);
+    console.log(formulario.value);
 
-    this.contact.PostMessage(formulario.value);
+    this.Routes.navigate(this.contact.PostMessage(formulario.value));
   }
   constructor(private contact: ContatoService) { }
-
-
   ngOnInit(): void {
   }
 

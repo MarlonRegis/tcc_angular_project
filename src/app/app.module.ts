@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContatoService } from './contato.service';
 import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
@@ -21,7 +20,7 @@ import { LayoutComponent } from './layout/layout.component';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [ContatoService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

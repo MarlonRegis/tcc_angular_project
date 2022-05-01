@@ -1,7 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Router, NavigationStart } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators'
-import { HttpHeaders } from '@angular/common/http'
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +12,9 @@ export class ContatoService {
 
   PostMessage(input: any) {
     console.log(input);
-    return this.http.post("https://formsubmit.co/milenacast.arqsite@gmail.com", input)
-    .subscribe(dados =>console.log(dados))
+    return this.http.post(this.api, input,
+    {responseType: 'text'}).subscribe(dados =>{
+      console.log(dados)
+    })
   }
-
 }

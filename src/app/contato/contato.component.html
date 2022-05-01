@@ -1,7 +1,7 @@
 <body>
     <div class="background"></div>
 
-    <section class="introducao-interna" [@popOverState]>
+    <section class="introducao-interna interna-produtos" [@popOverState]>
         <div>
             <h1> Contato</h1>
             <p>
@@ -11,14 +11,15 @@
     </section>
 
     <section class="contato container" data-anime="1200">
-        <form id="form-contato" #f="ngForm" (ngSubmit)="onSubmit(f)" class="grid-10" [@popOverState]>
+        <form id="form-contato" #f="ngForm" (ngSubmit)="onSubmit(f)" method="POST" class="grid-10" [@popOverState]>
+            <!--input type="hidden" name="_captcha" value="false"-->
             <label for="nome">Nome</label>
-            <input type="text" name="Fullname" id="nome" required [(ngModel)]="usuario.nome" #nome="ngModel">
+            <input type="text" name="nome" id="nome" required [(ngModel)]="usuario.nome" #nome="ngModel">
 
             <div *ngIf="!nome.valid && nome.touched">Nome é obrigatório</div>
 
             <label for="mail">E-mail</label>
-            <input type="email" name="Email" id="email" required [(ngModel)]="usuario.email" email #email="ngModel">
+            <input type="email" name="email" id="email" required [(ngModel)]="usuario.email" email #email="ngModel">
             <div *ngIf="!email.valid && email.touched">Email em branco ou inválido</div>
 
             <label for="telefone">Telefone</label>
