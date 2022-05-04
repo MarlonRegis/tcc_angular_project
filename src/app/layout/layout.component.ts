@@ -1,4 +1,6 @@
+import { ContentfulService } from './../contentful.service';
 import { Component, OnInit } from '@angular/core';
+import { Entry } from "contentful";
 
 @Component({
   selector: 'app-layout',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  layout: Entry<any> |undefined;
 
-  ngOnInit(): void {
+  constructor(private contentfulService: ContentfulService) {
+
   }
-
+    ngOnInit(): void {
+      this.contentfulService.getLayout()
+        .then(layout => this.layout = layout)
+     }
 }

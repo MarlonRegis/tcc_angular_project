@@ -1,5 +1,8 @@
+import { ContentfulService } from './../contentful.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { Entry } from "contentful";
+
 
 @Component({
   selector: 'app-projetos',
@@ -23,6 +26,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProjetosComponent implements OnInit {
 
   public otherProjects: boolean = false;
+  isFirst: boolean = false;
 
   showMore(): void{
   console.log("Clicado no botao de ver mais");
@@ -34,10 +38,22 @@ export class ProjetosComponent implements OnInit {
     this.otherProjects = false;
   }
 
-  constructor() {
+  projetos: Entry<any>[] = [];
+  projeto: Entry<any> |undefined;
+
+  constructor(private contentfulService: ContentfulService) {
 
   }
-    ngOnInit(): void {  }
+  ngOnInit(): void {
+    this.contentfulService.getProjetos()
+      .then(projetos => {
+        this.projeto = projetos[0];
+        projetos.splice(0,1);
+        this.projetos = projetos;
+      });
+  }
+
+
 
 }
 

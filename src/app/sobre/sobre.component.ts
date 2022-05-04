@@ -1,3 +1,5 @@
+import { Entry } from 'contentful';
+import { ContentfulService } from './../contentful.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
@@ -22,9 +24,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SobreComponent implements OnInit {
 
-  constructor() { }
+  sobre: Entry<any>|undefined;
 
-  ngOnInit(): void {
+  constructor(private contentfulService: ContentfulService) {
+
   }
+    ngOnInit(): void {
+      this.contentfulService.getSobre()
+        .then(sobre => this.sobre = sobre)
+     }
 
 }

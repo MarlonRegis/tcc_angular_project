@@ -1,4 +1,5 @@
-import { Router, Routes } from '@angular/router';
+import { Entry } from 'contentful';
+import { ContentfulService } from './../contentful.service';
 import { ContatoService } from './contato.service';
 
 import { FormGroup } from '@angular/forms';
@@ -26,6 +27,7 @@ import { Component, OnInit, NgModule } from '@angular/core';
 ]
 })
 export class ContatoComponent implements OnInit {
+  contato: Entry<any>|undefined;
 
   usuario: any = {
     nome: '',
@@ -40,8 +42,12 @@ export class ContatoComponent implements OnInit {
 
     this.Routes.navigate(this.contact.PostMessage(formulario.value));
   }
-  constructor(private contact: ContatoService) { }
+
+  constructor(private contact: ContatoService, private contentfulService: ContentfulService) { }
+
   ngOnInit(): void {
-  }
+    this.contentfulService.getContato()
+        .then(contato => this.contato = contato)
+     }
 
 }

@@ -13,22 +13,6 @@ section {
     height: 100vh;
 }
 
-@keyframes animate {
-    0%,
-    100% {
-        background-image: url("../../assets/imagens/home/1.png");
-    }
-    25% {
-        background-image: url("../../assets/imagens/home/2.png");
-    }
-    50% {
-        background-image: url("../../assets/imagens/home/3.png");
-    }
-    75% {
-        background-image: url("../../assets/imagens/home/4.png");
-    }
-}
-
 @media screen and (min-width: 788px) and (max-width: 979px) {
     section {
         height: 100vh;

@@ -1,16 +1,14 @@
 <body>
     <div class="background"></div>
-    <section class="missao-sobre container">
+    <section class="missao-sobre container" *ngIf="sobre">
         <div class="grid-10" [@popOverState]>
-            <h2 class="subtitulo-interno">História</h2>
-            <p>Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim
-                do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável
-                origem
+            <h2 class="subtitulo-interno">{{sobre.fields.titulo}}</h2>
+            <p>{{sobre.fields.descricaoDeTexto}}
             </p>
-            <p>Lorem Ipsum vem das seções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum"</p>
+            <p>{{sobre.fields.fraseFinal}}</p>
         </div>
         <div class="grid-6" [@popOverState]>
-            <img src="../../assets/imagens/foto_sobre.jpg" alt="Foto Milena Arquiteta">
+            <img src="{{sobre.fields.imagemSobre.fields.file.url}}" alt="Foto de equipe Milena Figueiroa Arquitetura">
         </div>
     </section>
 </body>
