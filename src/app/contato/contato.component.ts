@@ -1,11 +1,11 @@
 import { Entry } from 'contentful';
 import { ContentfulService } from './../contentful.service';
-import { ContatoService } from './contato.service';
-
+import {Router} from "@angular/router"
 import { FormGroup } from '@angular/forms';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 import { Component, OnInit, NgModule } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contato',
@@ -35,15 +35,22 @@ export class ContatoComponent implements OnInit {
     telefone: '',
     mensagem: ''
   }
-  Routes: any;
+
+
+  private api = "https://formspree.io/f/xrgjovrw";
 
   onSubmit(formulario: any ): void{
-    console.log(formulario.value);
-
-    this.Routes.navigate(this.contact.PostMessage(formulario.value));
+    this.http.post(this.api, formulario.value).subscribe(dados =>{
+      window.alert("Formulário enviado, estaremos em breve entrando em contato!");
+    },
+    error =>{
+      window.alert("Infelizmente ocorreu um erro no envio do seu formulário, pedimos que entre em contato através do nossos contatos!");
+    })
   }
 
-  constructor(private contact: ContatoService, private contentfulService: ContentfulService) { }
+  constructor(private contentfulService: ContentfulService,
+     private router: Router,
+     private http: HttpClient) { }
 
   ngOnInit(): void {
     this.contentfulService.getContato()
