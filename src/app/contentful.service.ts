@@ -11,47 +11,18 @@ export class ContentfulService {
     accessToken: environment.contentful.token
   })
 
-  getProjetos(query?: object): Promise<Entry<any>[]>{
+  getInformations(TypeofContent: any, query?: Object): Promise<Entry<any>[]>{
     return this.client.getEntries(Object.assign({
-      content_type: 'projetos'
+      content_type: TypeofContent
     }, query))
       .then(res=> res.items);
   }
 
-  getProjeto(projetoId: any): Promise<Entry<any>>{
+  getFirstInformation(ContentType: any, query?: any): Promise<Entry<any>>{
     return this.client.getEntries(Object.assign({
-      content_type: 'projetos'
-    }, {'sys.id': projetoId}))
-      .then(res=> res.items[0]);
-  }
-
-  getHome(query?: object): Promise<Entry<any>>{
-    return this.client.getEntries(Object.assign({
-      content_type: 'backgroundHome'
+      content_type: ContentType
     }, query))
       .then(res=> res.items[0]);
   }
-
-  getLayout(query?: object): Promise<Entry<any>>{
-    return this.client.getEntries(Object.assign({
-      content_type: 'layout'
-    }, query))
-      .then(res=> res.items[0]);
-  }
-
-  getContato(query?: object): Promise<Entry<any>>{
-    return this.client.getEntries(Object.assign({
-      content_type: 'contato'
-    }, query))
-      .then(res=> res.items[0]);
-  }
-
-  getSobre(query?: object): Promise<Entry<any>>{
-    return this.client.getEntries(Object.assign({
-      content_type: 'sobre'
-    }, query))
-      .then(res=> res.items[0]);
-  }
-
   constructor() { }
 }

@@ -30,7 +30,7 @@ export class SobreComponent implements OnInit {
 
   }
     ngOnInit(): void {
-      this.contentfulService.getSobre()
+      this.contentfulService.getFirstInformation('sobre')
         .then(sobre => this.sobre = sobre)
      }
 

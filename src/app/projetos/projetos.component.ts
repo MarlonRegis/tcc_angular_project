@@ -45,7 +45,7 @@ export class ProjetosComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.contentfulService.getProjetos()
+    this.contentfulService.getInformations('projetos')
       .then(projetos => {
         this.projeto = projetos[0];
         projetos.splice(0,1);

@@ -1,27 +1,25 @@
 <body class="background">
     <header class="container" *ngIf="layout">
         <a href="" class="logo grid-1">
-            <i class="logomarca " src=""><img src="{{layout.fields.imagemLogo.fields.file.url}}" alt="Logo da Milena Figueiroa Arquitetura"> </i>
+            <i class="logomarca " src="">
+              <img src="{{layout.fields.imagemLogo.fields.file.url}}" alt="Logo da Milena Figueiroa Arquitetura">
+            </i>
         </a>
         <div>
             <ul class="menu grid-15">
+                <li><a href="index">Home</a></li>
+                <li><a href="projetos">Projetos</a></li>
+                <li><a href="sobre">Sobre</a></li>
+                <li><a href="contato">Contato</a></li>
                 <li>
-                    <a href="index">Home</a>
+                    <a target="_blank" href="{{layout.fields.linkInstagram}}">
+                        <img src="../../assets/imagens/redes-sociais/icon-instagram.svg " alt="Icone do instagram ">
+                    </a>
                 </li>
                 <li>
-                    <a href="projetos">Projetos</a>
-                </li>
-                <li>
-                    <a href="sobre">Sobre</a>
-                </li>
-                <li>
-                    <a href="contato">Contato</a>
-                </li>
-                <li>
-                    <a target="_blank" href="{{layout.fields.linkInstagram}}"><img src="../../assets/imagens/redes-sociais/icon-instagram.svg " alt="Icone do instagram "></a>
-                </li>
-                <li>
-                    <a target="_blank" href="{{layout.fields.linkWhatsapp}}"><img src="../../assets/imagens/redes-sociais/whatsapp.svg " alt="Icone do Whatsapp"></a>
+                    <a target="_blank" href="{{layout.fields.linkWhatsapp}}">
+                        <img src="../../assets/imagens/redes-sociais/whatsapp.svg " alt="Icone do Whatsapp">
+                    </a>
                 </li>
             </ul>
         </div>

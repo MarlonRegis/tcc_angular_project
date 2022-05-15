@@ -53,7 +53,7 @@ export class ContatoComponent implements OnInit {
      private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.contentfulService.getContato()
+    this.contentfulService.getFirstInformation('contato')
         .then(contato => this.contato = contato)
      }
 

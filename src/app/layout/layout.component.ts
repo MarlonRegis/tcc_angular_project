@@ -15,7 +15,7 @@ export class LayoutComponent implements OnInit {
 
   }
     ngOnInit(): void {
-      this.contentfulService.getLayout()
+      this.contentfulService.getFirstInformation('layout')
         .then(layout => this.layout = layout)
      }
 }

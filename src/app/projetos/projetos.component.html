@@ -31,8 +31,8 @@
             </div>
         </div>
 
+        <button (click)="showMore()" *ngIf="!otherProjects" class="button_show">Mostre mais</button>
         <div *ngIf="otherProjects">
-            <button (click)="showMore()" *ngIf="!otherProjects" class="button_show">Mostre mais</button>
             <div class="projeto-item container" [@popOverState] *ngFor="let projeto of projetos">
                 <div class="grid-11">
                     <img src="{{projeto.fields.primeiraImagem.fields.file.url}}" alt="Primeira Imagem projeto {{projeto.fields.titulo}}">

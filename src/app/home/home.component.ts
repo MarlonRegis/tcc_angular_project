@@ -15,13 +15,11 @@ export class HomeComponent implements OnInit {
   constructor(private contentfulService: ContentfulService) { }
 
   ngOnInit(): void {
-    this.contentfulService.getHome()
+    this.contentfulService.getFirstInformation('backgroundHome')
       .then(background => {
         this.background = background;
         this.addSlide(background);
       });
-
-
    }
 
    addSlide (background:any){

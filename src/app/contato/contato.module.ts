@@ -1,4 +1,3 @@
-import { ContatoService } from './contato.service';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -14,6 +13,6 @@ import { ContatoComponent } from './contato.component';
     ContatoRoutingModule,
     FormsModule
   ],
-  providers: [ContatoService]
+  providers: []
 })
 export class ContatoModule { }
