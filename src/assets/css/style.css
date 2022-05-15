@@ -30,14 +30,9 @@ img {
     font-weight: bold;
 }
 
-.btn.btn-preto:hover {
+.btn:hover {
     color: #af8d8d;
     border-color: #af8d8d;
-}
-
-.btn:hover {
-    color: #fff;
-    border-color: #fff;
 }
 
 
