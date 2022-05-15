@@ -35,17 +35,24 @@ export class ContatoComponent implements OnInit {
     telefone: '',
     mensagem: ''
   }
-
+  token: string|undefined;
 
   private api = "https://formspree.io/f/xrgjovrw";
 
   onSubmit(formulario: any ): void{
-    this.http.post(this.api, formulario.value).subscribe(dados =>{
-      window.alert("Formulário enviado, estaremos em breve entrando em contato!");
-    },
-    error =>{
-      window.alert("Infelizmente ocorreu um erro no envio do seu formulário, pedimos que entre em contato através do nossos contatos!");
-    })
+    if(formulario.invalid){
+      for (const control of Object.keys(formulario.controls)) {
+        formulario.controls[control].markAsTouched();
+      }
+    }else{
+      this.http.post(this.api, formulario.value).subscribe(dados =>{
+        window.alert("Formulário enviado, estaremos em breve entrando em contato!");
+      },
+      error =>{
+        window.alert("Infelizmente ocorreu um erro no envio do seu formulário, pedimos que entre em contato através do nossos contatos!");
+      })
+
+    }
   }
 
   constructor(private contentfulService: ContentfulService,

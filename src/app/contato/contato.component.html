@@ -29,7 +29,12 @@
             <label for="espec">Mensagem</label>
             <textarea name="Comment" id="mensagem" cols="30" rows="10" [(ngModel)]="usuario.mensagem"></textarea>
 
-            <button class="btn btn-preto" type="submit" [disabled]="!f.valid && f.touched">Enviar</button>
+            <div class="recaptcha">
+                <re-captcha id="recaptcha" name="recaptcha" #recaptcha="ngModel" [(ngModel)]="token" required></re-captcha>
+                <div *ngIf="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)">Para enviar o formulário é necessário marcar o recaptcha</div>
+            </div>
+
+            <button class="btn" type="submit" [disabled]="!f.valid && f.touched">Enviar</button>
             <div *ngIf="!f.valid && f.touched">Preencha todos os campos obrigatórios</div>
         </form>
 

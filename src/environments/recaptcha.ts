@@ -2,17 +2,8 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
-  production: false,
+export const siteKey = '6LdkKPAfAAAAAPp5XLhF6mdnT3oMI5LGwtxL_hfZ';
 
-  contentful:{
-    spaceId: 'oceyxd3hvxd2',
-    token: 'icsgmQDqpfiUJBCDrzJPnvGEIGs_5b5RPoWpLddTrLo'
-  },
-  recaptcha: {
-    siteKey: '6LfKNi0cAAAAACeYwFRY9_d_qjGhpiwYUo5gNW5-',
-  },
-};
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
