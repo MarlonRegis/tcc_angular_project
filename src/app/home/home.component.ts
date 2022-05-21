@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
       });
    }
 
-   addSlide (background:any){
+   addSlide (background:any): void{
     this.styleElement = document.createElement( "style" );
     this.styleElement.type = "text/css";
     this.styleElement.textContent =

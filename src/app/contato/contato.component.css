@@ -10,7 +10,7 @@
 }
 
 label {
-    color: #fff;
+    color: #af8d8d;
 }
 
 .introducao-interna {
@@ -59,7 +59,7 @@ label {
 #form-contato input {
     display: block;
     width: 100%;
-    border: 2px solid #fff;
+    border: 2px solid #af8d8d;
     background: none;
     padding: 7px 10px;
     outline: none;
@@ -73,7 +73,7 @@ label {
     display: block;
     resize: none;
     width: 100%;
-    border: 2px solid #fff;
+    border: 2px solid #af8d8d;
     background: none;
     padding: 7px 10px;
     height: 120px;
@@ -105,7 +105,7 @@ button[disabled] {
 
 .contato-dados h3 {
     font-size: 16px;
-    color: #fff;
+    color: #af8d8d;
     text-transform: uppercase;
     line-height: 25px;
     font-weight: bold;
@@ -116,7 +116,7 @@ button[disabled] {
     font-size: 16px;
     font-family: 'Poppins', 'Times New Roman', Times, serif;
     line-height: 30px;
-    color: #fff;
+    color: #af8d8d;
 }
 
 .contato-dados span:nth-of-type(even) {

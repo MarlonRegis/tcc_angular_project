@@ -1,5 +1,5 @@
 .background {
-    position: absolute;
+    position: fixed;
     z-index: -1;
     top: 0%;
     left: 0%;
@@ -45,11 +45,11 @@
 }
 
 .projeto-info {
-    background: rgb(189, 189, 189);
+    background: #CFB7A1;
 }
 
 .projeto-info p {
-    color: #fff;
+    color: #ece8e4;
     font-size: 18px;
     line-height: 25px;
     height: 180px;
@@ -57,7 +57,8 @@
 }
 
 .projeto-info ul li {
-    background: #818181;
+    color: #af8d8d;
+    background: #E6D8CB;
     text-transform: uppercase;
     font-size: 18px;
     line-height: 20px;
@@ -107,9 +108,10 @@
 }
 
 .button_show {
-    width: 100%;
-    margin-top: 50px;
-    height: 120px;
+    padding: 0 100px;
+    margin: 30px auto;
+    display: block;
+    height: 80px;
     text-align: center;
     color: rgb(248, 170, 170);
     background-color: #fff;
@@ -117,13 +119,11 @@
     font-size: 24px;
     text-transform: uppercase;
     font-weight: bold;
+    border-radius: 30px;
 }
 
 @media screen and (min-width: 788px) and (max-width: 979px) {
     /*projetos*/
-    .projeto-item {
-        height: 100vh;
-    }
     .projeto-item h2 {
         margin-bottom: -56px;
     }

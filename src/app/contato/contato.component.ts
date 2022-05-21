@@ -45,7 +45,8 @@ export class ContatoComponent implements OnInit {
         formulario.controls[control].markAsTouched();
       }
     }else{
-      this.http.post(this.api, formulario.value).subscribe(dados =>{
+      console.log( JSON.stringify(formulario.value));
+      this.http.post(this.api, JSON.stringify(formulario.value)).subscribe(dados =>{
         window.alert("Formulário enviado, estaremos em breve entrando em contato!");
       },
       error =>{

@@ -23,7 +23,7 @@ img {
     line-height: 25px;
     margin-bottom: 1em;
     padding-right: 60px;
-    color: #fff;
+    color: #af8d8d;
 }
 
 .missao-sobre ul li {
@@ -69,9 +69,15 @@ img {
     line-height: 30px;
     font-weight: bold;
     letter-spacing: .1em;
-    color: #fff;
+    color: #af8d8d;
     text-transform: uppercase;
     margin-bottom: 20px;
+}
+
+@media screen and (min-width: 788px) and (max-width: 979px) {
+    .background {
+        height: 100%;
+    }
 }
 
 @media only screen and (max-width: 787px) {
