@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
       .then(background => {
         this.background = background;
         this.addSlide(background);
+        this.addSlideMobile(background);
       });
    }
 
@@ -44,4 +45,23 @@ export class HomeComponent implements OnInit {
       `;
       document.head.appendChild(this.styleElement);
    }
+
+   addSlideMobile (background:any): void{
+    this.styleElement = document.createElement( "style" );
+    this.styleElement.type = "text/css";
+    this.styleElement.textContent =
+      `@keyframes animateMobile {
+        0%,
+        100% {
+             background-image: url("${ background.fields.primeiraImagemMobile.fields.file.url }");
+        }
+        40% {
+           background-image: url("${ background.fields.segundaImagemMobile.fields.file.url }");
+        }
+         80% {
+           background-image: url("${ background.fields.terceiraImagemMobile.fields.file.url }");
+        }
+      `;
+      document.head.appendChild(this.styleElement);
+    }
 }

@@ -18,3 +18,9 @@ section {
         height: 100vh;
     }
 }
+
+@media only screen and (max-width: 787px) {
+    .background {
+        animation: animateMobile 15s ease-in-out infinite;
+    }
+}
