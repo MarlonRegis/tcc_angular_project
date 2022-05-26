@@ -174,4 +174,7 @@
         line-height: 20px;
         padding-top: 14px;
     }
+    .background {
+        background: url("../../assets/imagens/background-roseMobile.jpg") no-repeat center;
+    }
 }

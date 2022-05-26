@@ -166,4 +166,7 @@ button[disabled] {
     .introducao-interna {
         margin-top: 0;
     }
+    .background {
+        background: url("../../assets/imagens/background-roseMobile.jpg") no-repeat center;
+    }
 }

@@ -94,4 +94,7 @@ img {
     body {
         height: auto;
     }
+    .background {
+        background: url("../../assets/imagens/background-roseMobile.jpg") no-repeat center;
+    }
 }
