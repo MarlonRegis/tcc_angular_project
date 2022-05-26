@@ -49,17 +49,13 @@ export class HomeComponent implements OnInit {
     this.styleElement = document.createElement( "style" );
     this.styleElement.type = "text/css";
     this.styleElement.textContent =
-      `@keyframes animateMobile {
-        0%,
-        100% {
-             background-image: url("${ background.fields.primeiraImagemMobile.fields.file.url }");
+      `
+      @media screen and (max-width: 787px) {
+        .background {
+          z-index: -1;
+          background: url("${ background.fields.primeiraImagemMobile.fields.file.url }") no-repeat center;
         }
-        40% {
-           background-image: url("${ background.fields.segundaImagemMobile.fields.file.url }");
-        }
-         80% {
-           background-image: url("${ background.fields.terceiraImagemMobile.fields.file.url }");
-        }
+      }
       `;
       document.head.appendChild(this.styleElement);
     }
