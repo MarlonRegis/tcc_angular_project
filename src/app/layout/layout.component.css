@@ -103,5 +103,6 @@ img {
     }
     .menu li a img:hover {
         border: none;
+        text-decoration: none;
     }
 }
