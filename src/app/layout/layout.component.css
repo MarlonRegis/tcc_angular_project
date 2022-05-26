@@ -98,7 +98,6 @@ img {
     }
     .menu li a:hover {
         padding-bottom: 3px;
-        text-decoration: underline;
         border: none;
     }
     .menu li a img:hover {

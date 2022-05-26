@@ -98,15 +98,6 @@
     text-transform: uppercase;
 }
 
-.introducao-interna h1::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #fff;
-    margin: 6px auto 10px auto;
-}
-
 .button_show {
     padding: 0 100px;
     margin: 30px auto;
