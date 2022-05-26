@@ -19,9 +19,7 @@ export class HomeComponent implements OnInit {
       .then(background => {
         this.background = background;
         this.addSlide(background);
-        this.addSlideSafari(background);
         this.addSlideMobile(background);
-        this.addSlideMobileSafari(background);
       });
    }
 
@@ -29,8 +27,7 @@ export class HomeComponent implements OnInit {
     this.styleElement = document.createElement( "style" );
     this.styleElement.type = "text/css";
     this.styleElement.textContent =
-      `
-        @keyframes animate {
+      `@keyframes animate {
        0%,
        100% {
             background-image: url("${ background.fields.primeiraImagemSlide.fields.file.url }");
@@ -48,46 +45,6 @@ export class HomeComponent implements OnInit {
       document.head.appendChild(this.styleElement);
    }
 
-   addSlideSafari(background:any): void{
-    this.styleElement = document.createElement( "style" );
-    this.styleElement.type = "text/css";
-    this.styleElement.textContent =
-      `@-webkit-keyframes animate {
-        0%,
-        100% {
-             background-image: url("${ background.fields.primeiraImagemSlide.fields.file.url }");
-        }
-        25% {
-           background-image: url("${ background.fields.segundaImagemSlide.fields.file.url }");
-        }
-         50% {
-           background-image: url("${ background.fields.terceiraImagemSlide.fields.file.url }");
-        }
-        75% {
-           background-image: url("${ background.fields.quartaImagemSlide.fields.file.url }");
-        }
-      `;
-      document.head.appendChild(this.styleElement);
-   }
-
-   addSlideMobileSafari(background:any): void{
-    this.styleElement = document.createElement( "style" );
-    this.styleElement.type = "text/css";
-    this.styleElement.textContent =
-      `@-webkit-keyframes animateMobile {
-          0%,
-          100% {
-               background-image: url("${ background.fields.primeiraImagemMobile.fields.file.url }");
-          }
-          40% {
-             background-image: url("${ background.fields.segundaImagemMobile.fields.file.url }");
-          }
-           80% {
-             background-image: url("${ background.fields.terceiraImagemMobile.fields.file.url }");
-          }
-      `;
-      document.head.appendChild(this.styleElement);
-    }
    addSlideMobile (background:any): void{
     this.styleElement = document.createElement( "style" );
     this.styleElement.type = "text/css";

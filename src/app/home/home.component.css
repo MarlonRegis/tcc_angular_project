@@ -4,8 +4,7 @@
     left: 0%;
     top: 0%;
     width: 100%;
-    animation: animate 15s ease-in-out 0.03s infinite;
-    -webkit-animation: animate 15s ease-in-out 0.03s infinite;
+    animation: animate 15s ease-in-out infinite;
     background-size: cover;
     background-position: center;
 }
@@ -20,9 +19,8 @@ section {
     }
 }
 
-@media screen and (-webkit-max-device-pixel-ratio:787px) {
+@media screen and (max-width: 787px) {
     .background {
-        animation: animateMobile 15s ease-in-out 0.03s infinite;
-        -webkit-animation: animateMobile 15s ease-in-out 0.03s infinite;
+        animation: animateMobile 15s ease-in-out infinite;
     }
 }
