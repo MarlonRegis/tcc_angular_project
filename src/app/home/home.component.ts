@@ -51,10 +51,8 @@ export class HomeComponent implements OnInit {
     this.styleElement.textContent =
       `
       @media screen and (max-width: 787px) {
-        .background {
-          z-index: -1;
-          background: url("${ background.fields.primeiraImagemMobile.fields.file.url }") no-repeat center;
-        }
+        .home {
+          background: url("${ background.fields.primeiraImagemMobile.fields.file.url }") no-repeat center;}
       }
       `;
       document.head.appendChild(this.styleElement);

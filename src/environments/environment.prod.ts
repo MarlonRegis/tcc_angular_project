@@ -5,6 +5,6 @@ export const environment = {
     token: 'icsgmQDqpfiUJBCDrzJPnvGEIGs_5b5RPoWpLddTrLo'
   },
   recaptcha: {
-    siteKey: '6LfKNi0cAAAAACeYwFRY9_d_qjGhpiwYUo5gNW5-',
+    siteKey: '6LdkKPAfAAAAAPp5XLhF6mdnT3oMI5LGwtxL_hfZ',
   }
 };
