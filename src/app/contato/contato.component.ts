@@ -39,7 +39,7 @@ export class ContatoComponent implements OnInit {
 
   private api = "https://formspree.io/f/xrgjovrw";
 
-  onSubmit(formulario: FormGroup ): void{
+  onSubmit(formulario: any ): void{
     if(formulario.invalid){
       for (const control of Object.keys(formulario.controls)) {
         formulario.controls[control].markAsTouched();
