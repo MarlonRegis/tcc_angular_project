@@ -20,7 +20,7 @@ section {
     }
 }
 
-@media screen and (max-width: 787px) {
+@media screen and (-webkit-max-device-pixel-ratio:787px) {
     .background {
         animation: animateMobile 15s ease-in-out 0.03s infinite;
         -webkit-animation: animateMobile 15s ease-in-out 0.03s infinite;
