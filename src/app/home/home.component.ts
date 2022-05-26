@@ -76,6 +76,18 @@ export class HomeComponent implements OnInit {
          80% {
            background-image: url("${ background.fields.terceiraImagemMobile.fields.file.url }");
         }
+
+        @-webkit-keyframes animateMobile {
+          0%,
+          100% {
+               background-image: url("${ background.fields.primeiraImagemMobile.fields.file.url }");
+          }
+          40% {
+             background-image: url("${ background.fields.segundaImagemMobile.fields.file.url }");
+          }
+           80% {
+             background-image: url("${ background.fields.terceiraImagemMobile.fields.file.url }");
+          }
       `;
       document.head.appendChild(this.styleElement);
     }
