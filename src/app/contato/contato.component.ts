@@ -39,7 +39,7 @@ export class ContatoComponent implements OnInit {
 
   private api = "https://formspree.io/f/xrgjovrw";
 
-  onSubmit(formulario: any ): void{
+  onSubmit(formulario: FormGroup ): void{
     if(formulario.invalid){
       for (const control of Object.keys(formulario.controls)) {
         formulario.controls[control].markAsTouched();
@@ -48,12 +48,13 @@ export class ContatoComponent implements OnInit {
       console.log( JSON.stringify(formulario.value));
       this.http.post(this.api, JSON.stringify(formulario.value)).subscribe(dados =>{
         window.alert("Formulário enviado, estaremos em breve entrando em contato!");
+        formulario.reset();
       },
       error =>{
         window.alert("Infelizmente ocorreu um erro no envio do seu formulário, pedimos que entre em contato através do nossos contatos!");
       })
-
     }
+
   }
 
   constructor(private contentfulService: ContentfulService,
