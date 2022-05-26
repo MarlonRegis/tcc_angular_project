@@ -42,6 +42,21 @@ export class HomeComponent implements OnInit {
        75% {
           background-image: url("${ background.fields.quartaImagemSlide.fields.file.url }");
        }
+
+       @-webkit-keyframes animate {
+        0%,
+        100% {
+             background-image: url("${ background.fields.primeiraImagemSlide.fields.file.url }");
+        }
+        25% {
+           background-image: url("${ background.fields.segundaImagemSlide.fields.file.url }");
+        }
+         50% {
+           background-image: url("${ background.fields.terceiraImagemSlide.fields.file.url }");
+        }
+        75% {
+           background-image: url("${ background.fields.quartaImagemSlide.fields.file.url }");
+        }
       `;
       document.head.appendChild(this.styleElement);
    }
