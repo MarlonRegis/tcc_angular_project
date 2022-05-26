@@ -4,7 +4,7 @@
     left: 0%;
     top: 0%;
     width: 100%;
-    animation: animate 15s ease-in-out infinite;
+    animation: animate 15s ease-in-out 0.03s infinite;
     background-size: cover;
     background-position: center;
 }
@@ -21,6 +21,6 @@ section {
 
 @media screen and (max-width: 787px) {
     .background {
-        animation: animateMobile 15s ease-in-out infinite;
+        animation: animateMobile 15s ease-in-out 0.03s infinite;
     }
 }
