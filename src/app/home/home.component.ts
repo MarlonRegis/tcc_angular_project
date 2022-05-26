@@ -19,11 +19,13 @@ export class HomeComponent implements OnInit {
       .then(background => {
         this.background = background;
         this.addSlide(background);
+        this.addSlideSafari(background);
         this.addSlideMobile(background);
+        this.addSlideMobileSafari(background);
       });
    }
 
-   addSlide (background:any): void{
+   addSlide(background:any): void{
     this.styleElement = document.createElement( "style" );
     this.styleElement.type = "text/css";
     this.styleElement.textContent =
@@ -42,8 +44,15 @@ export class HomeComponent implements OnInit {
        75% {
           background-image: url("${ background.fields.quartaImagemSlide.fields.file.url }");
        }
+      `;
+      document.head.appendChild(this.styleElement);
+   }
 
-       @-webkit-keyframes animate {
+   addSlideSafari(background:any): void{
+    this.styleElement = document.createElement( "style" );
+    this.styleElement.type = "text/css";
+    this.styleElement.textContent =
+      `@-webkit-keyframes animate {
         0%,
         100% {
              background-image: url("${ background.fields.primeiraImagemSlide.fields.file.url }");
@@ -61,6 +70,24 @@ export class HomeComponent implements OnInit {
       document.head.appendChild(this.styleElement);
    }
 
+   addSlideMobileSafari(background:any): void{
+    this.styleElement = document.createElement( "style" );
+    this.styleElement.type = "text/css";
+    this.styleElement.textContent =
+      `@-webkit-keyframes animateMobile {
+          0%,
+          100% {
+               background-image: url("${ background.fields.primeiraImagemMobile.fields.file.url }");
+          }
+          40% {
+             background-image: url("${ background.fields.segundaImagemMobile.fields.file.url }");
+          }
+           80% {
+             background-image: url("${ background.fields.terceiraImagemMobile.fields.file.url }");
+          }
+      `;
+      document.head.appendChild(this.styleElement);
+    }
    addSlideMobile (background:any): void{
     this.styleElement = document.createElement( "style" );
     this.styleElement.type = "text/css";
@@ -76,18 +103,6 @@ export class HomeComponent implements OnInit {
          80% {
            background-image: url("${ background.fields.terceiraImagemMobile.fields.file.url }");
         }
-
-        @-webkit-keyframes animateMobile {
-          0%,
-          100% {
-               background-image: url("${ background.fields.primeiraImagemMobile.fields.file.url }");
-          }
-          40% {
-             background-image: url("${ background.fields.segundaImagemMobile.fields.file.url }");
-          }
-           80% {
-             background-image: url("${ background.fields.terceiraImagemMobile.fields.file.url }");
-          }
       `;
       document.head.appendChild(this.styleElement);
     }
